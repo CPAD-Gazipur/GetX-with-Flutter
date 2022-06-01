@@ -46,6 +46,32 @@ class _TodoAppState extends State<TodoApp> {
               Icons.check_box,
               color: itemList[index].isDone! ? Colors.blue : Colors.grey,
             ),
+            trailing: IconButton(
+              icon: const Icon(
+                Icons.delete,
+                color: Colors.red,
+              ),
+              onPressed: () {
+                Get.defaultDialog(
+                  title: 'Are you sure to delete item ?',
+                  content: Text(itemList[index].itemName!),
+                  confirm: ElevatedButton(
+                    onPressed: () {
+                      itemList.removeAt(index);
+                      Get.back();
+                      setState(() {});
+                    },
+                    child: const Text('Yes'),
+                  ),
+                  cancel: ElevatedButton(
+                    onPressed: () {
+                      Get.back();
+                    },
+                    child: const Text('No'),
+                  ),
+                );
+              },
+            ),
             onTap: () {
               setState(() {
                 itemList[index].isDone = !itemList[index].isDone!;

@@ -15,9 +15,13 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           ListTile(
-            leading: const Icon(Icons.people,color: Colors.grey,),
+            leading: const Icon(
+              Icons.people,
+              color: Colors.grey,
+            ),
+
             title: const Text('GetX Utils'),
-            onTap: (){
+            onTap: () {
               // Manual Page Routing
               // Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const GetXUtilsImplementation()));
 
@@ -26,10 +30,13 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.people,color: Colors.grey,),
+            leading: const Icon(
+              Icons.people,
+              color: Colors.grey,
+            ),
             title: const Text('Example'),
-            onTap: (){
-              Get.to(()=> const TodoApp());
+            onTap: () {
+              Get.to(() => const TodoApp());
             },
           ),
         ],
