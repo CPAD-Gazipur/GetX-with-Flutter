@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_with_flutter/getx_example/obx_example.dart';
 import 'package:getx_with_flutter/getx_example/todo_example.dart';
 import 'package:getx_with_flutter/getx_utils/getx_utils.dart';
 
@@ -26,7 +27,10 @@ class HomeScreen extends StatelessWidget {
               // Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const GetXUtilsImplementation()));
 
               // GetX Page Routing
-              Get.to(const GetXUtilsImplementation());
+              //Get.to(const GetXUtilsImplementation());
+
+              // GetX named Routing
+              Get.toNamed('/utilsImplementation');
             },
           ),
           ListTile(
@@ -34,9 +38,27 @@ class HomeScreen extends StatelessWidget {
               Icons.people,
               color: Colors.grey,
             ),
-            title: const Text('Example'),
+            title: const Text('Todo App (Example)'),
             onTap: () {
-              Get.to(() => const TodoApp());
+              // GetX Page Routing
+              //Get.to(() => const TodoApp());
+
+              // GetX named Routing
+              Get.toNamed('/todoApp');
+            },
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.people,
+              color: Colors.grey,
+            ),
+            title: const Text('Obx Example'),
+            onTap: () {
+              // GetX Page Routing with Animation
+              //Get.to(() => ObxExample(),curve: Curves.ease,duration: const Duration(milliseconds: 1000));
+
+              //// GetX named Routing
+              Get.toNamed('/obxExample');
             },
           ),
         ],

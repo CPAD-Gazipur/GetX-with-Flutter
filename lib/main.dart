@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_with_flutter/getx_example/obx_example.dart';
+import 'package:getx_with_flutter/getx_example/todo_example.dart';
+import 'package:getx_with_flutter/getx_utils/getx_utils.dart';
 import 'ui/home_screen.dart';
 
 void main() {
@@ -10,9 +13,14 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      getPages: [
+        GetPage(name: '/', page: () => const HomeScreen()),
+        GetPage(name: '/utilsImplementation', page: () => const GetXUtilsImplementation()),
+        GetPage(name: '/todoApp', page: () => const TodoApp()),
+        GetPage(name: '/obxExample', page: () => ObxExample()),
+      ],
     );
   }
 }
