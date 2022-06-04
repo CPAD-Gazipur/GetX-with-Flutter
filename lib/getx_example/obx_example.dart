@@ -42,12 +42,14 @@ class ObxExample extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 FloatingActionButton(
+                  heroTag: 'increment',
                   onPressed: () {
                     decrement();
                   },
                   child: const Icon(Icons.remove),
                 ),
                 FloatingActionButton(
+                  heroTag: 'decrement',
                   onPressed: () {
                     increment();
                   },

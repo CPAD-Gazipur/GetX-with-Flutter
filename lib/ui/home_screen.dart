@@ -38,7 +38,21 @@ class HomeScreen extends StatelessWidget {
               Icons.people,
               color: Colors.grey,
             ),
-            title: const Text('Todo App (Example)'),
+            title: const Text('Obx Example'),
+            onTap: () {
+              // GetX Page Routing with Animation
+              //Get.to(() => ObxExample(),curve: Curves.ease,duration: const Duration(milliseconds: 1000));
+
+              //// GetX named Routing
+              Get.toNamed('/obxExample');
+            },
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.people,
+              color: Colors.grey,
+            ),
+            title: const Text('Todo App'),
             onTap: () {
               // GetX Page Routing
               //Get.to(() => const TodoApp());
@@ -52,15 +66,16 @@ class HomeScreen extends StatelessWidget {
               Icons.people,
               color: Colors.grey,
             ),
-            title: const Text('Obx Example'),
+            title: const Text('Contact App'),
             onTap: () {
-              // GetX Page Routing with Animation
-              //Get.to(() => ObxExample(),curve: Curves.ease,duration: const Duration(milliseconds: 1000));
+              // GetX Page Routing
+              //Get.to(() => const TodoApp());
 
-              //// GetX named Routing
-              Get.toNamed('/obxExample');
+              // GetX named Routing
+              Get.toNamed('/contactApp');
             },
           ),
+
         ],
       ),
     );
