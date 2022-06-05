@@ -8,25 +8,25 @@ class GetXUtilsImplementation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Utility Functions of GetX'),
+        title: Text('utility_title'.tr),
       ),
       body: Column(
         children: [
           ListTile(
-            title: const Text('Snackbar in GetX'),
+            title: Text('get_x_snack_bar'.tr),
             onTap: () {
-              Get.snackbar('Success', 'Wow, Snackbar working...',
+              Get.snackbar('success'.tr, 'snack_bar'.tr,
                   colorText: Colors.white, backgroundColor: Colors.black26);
             },
           ),
           ListTile(
-            title: const Text('Dialog in GetX'),
+            title: Text('get_x_dialog'.tr),
             onTap: () {
               Get.defaultDialog(
-                title: 'Dialog in GetX',
+                title: 'get_x_dialog'.tr,
                 content: Column(
                   children: [
-                    const Text('Flutter Dialog in GetX'),
+                    Text('flutter_get_x_dialog'.tr),
                     const SizedBox(
                       height: 10,
                     ),
@@ -34,7 +34,7 @@ class GetXUtilsImplementation extends StatelessWidget {
                       onPressed: () {
                         Get.back();
                       },
-                      child: const Text('Done'),
+                      child: Text('done'.tr),
                     ),
                   ],
                 ),
@@ -42,7 +42,7 @@ class GetXUtilsImplementation extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('BottomSheet in GetX'),
+            title: Text('get_x_bottom_sheet'.tr),
             onTap: () {
               Get.bottomSheet(
                 enterBottomSheetDuration: const Duration(milliseconds: 700),
@@ -63,7 +63,7 @@ class GetXUtilsImplementation extends StatelessWidget {
                       const SizedBox(
                         height: 20,
                       ),
-                      const Text('Flutter Dialog in GetX'),
+                      Text('flutter_get_x_dialog'.tr),
                       const SizedBox(
                         height: 10,
                       ),
@@ -71,7 +71,7 @@ class GetXUtilsImplementation extends StatelessWidget {
                         onPressed: () {
                           Get.back();
                         },
-                        child: const Text('Close'),
+                        child: Text('close'.tr),
                       ),
                     ],
                   ),

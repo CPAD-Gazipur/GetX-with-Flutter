@@ -19,7 +19,7 @@ class _TodoAppState extends State<TodoApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Todo App'),
+        title: Text('todo_app'.tr),
       ),
       body: ListView.builder(
         itemCount: itemList.length,
@@ -29,7 +29,7 @@ class _TodoAppState extends State<TodoApp> {
         itemBuilder: (context, index) {
           return ListTile(
             title: Text(
-              'Task: ${index + 1}',
+              'task'.tr + (index+1).toString(),
               style: TextStyle(
                 decoration:
                     itemList[index].isDone! ? TextDecoration.lineThrough : null,
@@ -53,7 +53,7 @@ class _TodoAppState extends State<TodoApp> {
               ),
               onPressed: () {
                 Get.defaultDialog(
-                  title: 'Are you sure to delete item ?',
+                  title: 'delete_item'.tr,
                   content: Text(itemList[index].itemName!),
                   confirm: ElevatedButton(
                     onPressed: () {
@@ -61,13 +61,13 @@ class _TodoAppState extends State<TodoApp> {
                       Get.back();
                       setState(() {});
                     },
-                    child: const Text('Yes'),
+                    child: Text('yes'.tr),
                   ),
                   cancel: ElevatedButton(
                     onPressed: () {
                       Get.back();
                     },
-                    child: const Text('No'),
+                    child: Text('no'.tr),
                   ),
                 );
               },
@@ -103,10 +103,10 @@ class _TodoAppState extends State<TodoApp> {
                   ),
                   TextField(
                     keyboardType: TextInputType.text,
-                    decoration: const InputDecoration(
-                      hintText: 'Item name',
-                      border: OutlineInputBorder(),
-                      focusedBorder: OutlineInputBorder(),
+                    decoration: InputDecoration(
+                      hintText: 'item_name'.tr,
+                      border: const OutlineInputBorder(),
+                      focusedBorder: const OutlineInputBorder(),
                     ),
                     controller: itemController,
                   ),
@@ -116,7 +116,7 @@ class _TodoAppState extends State<TodoApp> {
                   MaterialButton(
                     onPressed: () {
                       if (itemController.text.isEmpty) {
-                        Get.snackbar('Warning', 'Item name required !',
+                        Get.snackbar('waring'.tr, 'item_required'.tr,
                             colorText: Colors.white,
                             backgroundColor: Colors.black54);
                         return;
@@ -129,11 +129,11 @@ class _TodoAppState extends State<TodoApp> {
                       setState(() {});
                     },
                     color: Colors.blue,
-                    child: const Padding(
-                      padding: EdgeInsets.all(8.0),
+                    child:  Padding(
+                      padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'ADD ITEM',
-                        style: TextStyle(
+                        'add_item'.tr,
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                         ),

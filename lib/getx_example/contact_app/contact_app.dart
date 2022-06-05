@@ -16,7 +16,7 @@ class ContactApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Contact List'),
+        title: Text('contact_list'.tr),
       ),
       body: Column(
         children: [
@@ -66,10 +66,10 @@ class ContactApp extends StatelessWidget {
                                   color: Colors.blue,
                                 ),
                                 padding: const EdgeInsets.all(8.0),
-                                child: const Center(
+                                child:  Center(
                                   child: Text(
-                                    'Contact Details',
-                                    style: TextStyle(
+                                    'contact_details'.tr,
+                                    style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
@@ -82,33 +82,35 @@ class ContactApp extends StatelessWidget {
                                 height: 10,
                               ),
                               Text(
-                                'Name: ${contact.name}',
+                                'name'.tr + contact.name,
                               ),
                               const Divider(),
                               const SizedBox(
                                 height: 10,
                               ),
-                              Text('Email: ${contact.emailAddress}'),
+                              Text('email'.tr + contact.emailAddress),
                               const Divider(),
                               const SizedBox(
                                 height: 10,
                               ),
-                              Text('Phone Number: ${contact.phoneNumber}'),
+                              Text('phone_number'.tr + contact.phoneNumber),
                               const Divider(),
                               const SizedBox(height: 20,),
-                              Center(
-                                child: MaterialButton(
-                                  onPressed: () {
-                                    contactController.deleteContact(contact);
-                                  },
-                                  color: Colors.blue,
-                                  padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
-                                  minWidth: 300,
-                                  child: const Text(
-                                    'Delete Contact',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 16,
+                              Expanded(
+                                child: Center(
+                                  child: MaterialButton(
+                                    onPressed: () {
+                                      contactController.deleteContact(contact);
+                                    },
+                                    color: Colors.blue,
+                                    padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                                    minWidth: 300,
+                                    child:  Text(
+                                      'delete_contact'.tr,
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -139,9 +141,9 @@ class ContactApp extends StatelessWidget {
               color: Colors.blue,
               padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
               minWidth: 300,
-              child: const Text(
-                'Add Contacts',
-                style: TextStyle(
+              child: Text(
+                'add_contact'.tr,
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 16,
                 ),

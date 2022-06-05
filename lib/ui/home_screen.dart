@@ -1,17 +1,66 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_with_flutter/getx_example/obx_example.dart';
-import 'package:getx_with_flutter/getx_example/todo_example.dart';
-import 'package:getx_with_flutter/getx_utils/getx_utils.dart';
+import '../utils/localization_page.dart';
+import '../utils/app_credentials.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  bool isEnglish = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('GetX with Flutter'),
+        title: Text('title'.tr),
+        actions: [
+          Center(
+            child: Text(
+              'BN',
+              style: TextStyle(
+                fontWeight: isEnglish ? FontWeight.normal : FontWeight.bold,
+                color: isEnglish ? Colors.white60 : Colors.white,
+              ),
+            ),
+          ),
+          Transform.scale(
+            scale: 0.7,
+            child: CupertinoSwitch(
+              activeColor: Colors.white70,
+              trackColor: Colors.black26,
+              thumbColor: Colors.white,
+              value: isEnglish,
+              onChanged: (value) {
+                setState(() {
+                  isEnglish = value;
+                  if(isEnglish){
+                    LocalizationService().changeLocale(englishLanguage);
+                  }
+                  else{
+                    LocalizationService().changeLocale(bengaliLanguage);
+                  }
+                });
+              },
+            ),
+          ),
+          Center(
+              child: Text(
+            'EN',
+            style: TextStyle(
+              fontWeight: isEnglish? FontWeight.bold : FontWeight.normal,
+              color: isEnglish ? Colors.white : Colors.white60,
+            ),
+          )),
+          const SizedBox(
+            width: 10,
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -20,8 +69,7 @@ class HomeScreen extends StatelessWidget {
               Icons.people,
               color: Colors.grey,
             ),
-
-            title: const Text('GetX Utils'),
+            title: Text('get_x_utils'.tr),
             onTap: () {
               // Manual Page Routing
               // Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const GetXUtilsImplementation()));
@@ -38,7 +86,7 @@ class HomeScreen extends StatelessWidget {
               Icons.people,
               color: Colors.grey,
             ),
-            title: const Text('Obx Example'),
+            title: Text('obx_example'.tr),
             onTap: () {
               // GetX Page Routing with Animation
               //Get.to(() => ObxExample(),curve: Curves.ease,duration: const Duration(milliseconds: 1000));
@@ -52,7 +100,7 @@ class HomeScreen extends StatelessWidget {
               Icons.people,
               color: Colors.grey,
             ),
-            title: const Text('Todo App'),
+            title: Text('todo_app'.tr),
             onTap: () {
               // GetX Page Routing
               //Get.to(() => const TodoApp());
@@ -66,7 +114,7 @@ class HomeScreen extends StatelessWidget {
               Icons.people,
               color: Colors.grey,
             ),
-            title: const Text('Contact App'),
+            title: Text('contact_app'.tr),
             onTap: () {
               // GetX Page Routing
               //Get.to(() => const TodoApp());
@@ -75,7 +123,6 @@ class HomeScreen extends StatelessWidget {
               Get.toNamed('/contactApp');
             },
           ),
-
         ],
       ),
     );

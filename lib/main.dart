@@ -4,6 +4,7 @@ import 'package:getx_with_flutter/getx_example/contact_app/contact_app.dart';
 import 'package:getx_with_flutter/getx_example/obx_example.dart';
 import 'package:getx_with_flutter/getx_example/todo_example.dart';
 import 'package:getx_with_flutter/getx_utils/getx_utils.dart';
+import 'package:getx_with_flutter/utils/localization_page.dart';
 import 'ui/home_screen.dart';
 
 void main() {
@@ -15,6 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      locale: LocalizationService.locale,
+      fallbackLocale: LocalizationService.fallBackLocale,
+      translations: LocalizationService(),
       debugShowCheckedModeBanner: false,
       getPages: [
         GetPage(name: '/', page: () => const HomeScreen()),

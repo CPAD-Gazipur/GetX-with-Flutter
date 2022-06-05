@@ -22,7 +22,7 @@ class _AddContactState extends State<AddContact> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add Contact'),
+        title: Text('add_contact'.tr),
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
@@ -35,13 +35,13 @@ class _AddContactState extends State<AddContact> {
                 keyboardType: TextInputType.name,
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'Name is required';
+                    return 'name_require'.tr;
                   }
                   return null;
                 },
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Name',
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(),
+                  hintText: 'name_'.tr,
                 ),
               ),
               const SizedBox(
@@ -52,15 +52,15 @@ class _AddContactState extends State<AddContact> {
                 keyboardType: TextInputType.phone,
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'Phone number is required';
+                    return 'phone_require'.tr;
                   } else if (value.length > 11 || value.length < 11) {
-                    return 'Phone number must be 11 digit';
+                    return 'phone_require_11_digit'.tr;
                   }
                   return null;
                 },
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Phone number',
+                decoration:  InputDecoration(
+                  border: const OutlineInputBorder(),
+                  hintText: 'phone'.tr,
                 ),
               ),
               const SizedBox(
@@ -71,15 +71,15 @@ class _AddContactState extends State<AddContact> {
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'Email is required';
+                    return 'email_require'.tr;
                   } else if (!value.contains('@')) {
-                    return 'Please use valid email';
+                    return 'valid_email_require'.tr;
                   }
                   return null;
                 },
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Email address',
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(),
+                  hintText: 'email_address'.tr,
                 ),
               ),
               const SizedBox(
@@ -105,9 +105,9 @@ class _AddContactState extends State<AddContact> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
                 minWidth: 300,
-                child: const Text(
-                  'Add',
-                  style: TextStyle(
+                child:  Text(
+                  'add'.tr,
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                   ),

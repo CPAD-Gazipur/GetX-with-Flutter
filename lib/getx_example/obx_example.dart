@@ -18,7 +18,7 @@ class ObxExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Obx Example'),
+        title: Text('obx_example'.tr),
       ),
       body: Center(
         child: Column(
@@ -28,7 +28,7 @@ class ObxExample extends StatelessWidget {
           children: [
             Obx(
               () => Text(
-                'Number: $value',
+                'number'.tr + value.toString(),
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 24,
