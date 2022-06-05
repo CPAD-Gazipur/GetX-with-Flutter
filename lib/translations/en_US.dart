@@ -30,7 +30,6 @@ const Map<String, String> en = {
   'phone_number': 'Phone Number: ',
   'delete_contact': 'Delete Contact',
   'add_contact': 'Add Contact',
-
   'name_require': 'Name is required',
   'name_': 'Name',
   'phone_require': 'Phone number is required',
@@ -40,6 +39,9 @@ const Map<String, String> en = {
   'valid_email_require': 'Please use valid email',
   'email_address': 'Email address',
   'add': 'Add',
+  'dummy_api': 'Dummy Api App',
+  'fetch_data': 'Fetch User Data',
+  'user_list': 'User List',
 
 
 };

@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           ListTile(
             leading: const Icon(
-              Icons.people,
+              Icons.backup_table_outlined,
               color: Colors.grey,
             ),
             title: Text('obx_example'.tr),
@@ -97,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           ListTile(
             leading: const Icon(
-              Icons.people,
+              Icons.task_outlined,
               color: Colors.grey,
             ),
             title: Text('todo_app'.tr),
@@ -111,7 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           ListTile(
             leading: const Icon(
-              Icons.people,
+              Icons.call_merge,
               color: Colors.grey,
             ),
             title: Text('contact_app'.tr),
@@ -121,6 +121,20 @@ class _HomeScreenState extends State<HomeScreen> {
 
               // GetX named Routing
               Get.toNamed('/contactApp');
+            },
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.api,
+              color: Colors.grey,
+            ),
+            title: Text('dummy_api'.tr),
+            onTap: () {
+              // GetX Page Routing
+              //Get.to(() => const TodoApp());
+
+              // GetX named Routing
+              Get.toNamed('/dummyApiApp');
             },
           ),
         ],

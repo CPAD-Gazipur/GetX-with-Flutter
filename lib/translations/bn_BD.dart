@@ -39,4 +39,7 @@ const Map<String, String> bn = {
   'valid_email_require': 'বৈধ ইমেইল ব্যবহার করুন',
   'email_address': 'ইমেইল ঠিকানা',
   'add': 'যোগ করুন',
+  'dummy_api': 'ডামি এপিআই অ্যাপ',
+  'fetch_data': 'ব্যবহারকারীর ডেটা আনুন',
+  'user_list': 'ব্যবহারকারীর তালিকা',
 };
