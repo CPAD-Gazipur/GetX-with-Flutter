@@ -13,7 +13,6 @@ Link: https://terabox.com/s/1ZJZDKUdsxVNFgeK_lIXkBw
 ## Phone Screenshots:
 
 
-
 | Home Screen      |  API Screen |  BottomSheet Screen |
 | :---:       |    :----:   | :----:   |
 | <img src="screenshots/getx_flutter_home_screen.png" width="250">       |  <img src="screenshots/getx_flutter_api.png" width="250">     |  <img src="screenshots/getx_flutter_bottom_sheet.png" width="250">  |
