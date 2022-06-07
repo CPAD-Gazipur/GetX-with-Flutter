@@ -4,7 +4,7 @@ This is a Flutter Application where I have practice GetX State Management. Here 
 
 ## Live Site:
 
-Link: https://cpad-gazipur.github.io/
+Link: https://cpad-gazipur.github.io/GetX-with-Flutter/
 
 ## Download APK:
 
