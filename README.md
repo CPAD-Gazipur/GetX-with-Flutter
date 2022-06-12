@@ -47,7 +47,7 @@ for any query please contact me.
 ##### Junior Software Engineer (Android & iOS) at Rokomari.com
 
 __Email :__ [ alamin.karno@outlook.com ](mailto:alamin.karno@outlook.com) \
-__Github :__ [Md. Al-Amin](https://github.com/karno786) \
+__Github :__ [Md. Al-Amin](https://github.com/alamin-karno) \
 __Facebook :__ [মোঃ আল-আমিন খন্দকার কর্ণ](https://facebook.com/alamin.kanro786) \
 __Linkedin :__ [Md. Alamin Karno](https://www.linkedin.com/in/alaminkarno/)
 
